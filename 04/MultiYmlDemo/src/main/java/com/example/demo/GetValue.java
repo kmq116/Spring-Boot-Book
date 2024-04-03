@@ -15,5 +15,12 @@ public class GetValue {
         return myenvironment;
     }
 
+    @Value("${server.port}")
+    private int port;
+    @GetMapping("/getPort")
+    private int getPort(){
+        return port;
+    }
+
 
 }
